@@ -1,0 +1,310 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+.container .location_contaner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 40px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .container .location_contaner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+.container .location_contaner .sity{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 60%;
+}
+
+@media (max-width: 600px) {
+    .container .location_contaner .sity {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.container .location_contaner .sity input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: transparent;
+}
+
+.container .location_btn{
+    border: none;
+    background-color: #ffdba6;
+    padding:3px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.container .location_btn:hover {
+    background-color: #ffd18c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .container .location_btn {
+        width: 100%;
+    }
+}
+
+.container .Information_Prayer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .container .Information_Prayer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container .Information_Prayer .Information_Sity,
+    .container .Information_Prayer .chose_time {
+        width: fit-content;
+        order: 2;
+    }
+    
+    .container .Information_Prayer .Information_Time {
+        order: 1;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+     .container .Information_Prayer {
+        gap: 15px;
+     }
+}
+
+.container .Information_Prayer .Information_Sity,
+.container .Information_Prayer .chose_time{
+    display: flex;
+    gap: 10px;
+    padding:3px 7px;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.container .Information_Prayer .Information_Time{
+    text-align: center;
+}
+
+.container .Information_Prayer .Information_Time h3{
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.container .Information_Prayer .Information_Time p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.container .Information_Prayer .Information_Time p .hijriDate{
+    direction: rtl;
+}
+
+.container .Information_Prayer .Information_Time p .gregorianDate{
+    direction: ltr;
+}
+
+@media (max-width: 600px) {
+    .container .Information_Prayer .Information_Time h3 {
+        font-size: 1.6rem;
+    }
+}
+
+.container .content{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container .content {
+        padding: 20px 15px;
+    }
+}
+
+.container .content .prayers_time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.container .content .prayers_time .prayer_time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 200px;
+    padding: 25px 15px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (max-width: 400px) {
+    .container .content .prayers_time .prayer_time {
+        width: 130px;
+        height: 180px;
+        font-size: 1.3rem;
+    }
+}
+
+.container .content .prayers_time .prayer_time:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.container .content .prayers_time .prayer_time::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.container .content .prayers_time .prayer_time p,
+.container .content .prayers_time .prayer_time h4 {
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.container .content .prayers_time .prayer_time h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container .content .content_buttom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.container .content .content_buttom .Adhkar,
+.container .content .content_buttom .prayer_time_tomorow,
+.container .content .content_buttom .compass{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 15px;
+    gap: 12px;
+    border: 2px solid transparent; 
+    font-size: 1.1rem;
+    background-color: rgba(27, 230, 98, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for light/dark */
+}
+
+.container .content .content_buttom .Adhkar:hover,
+.container .content .content_buttom .prayer_time_tomorow:hover,
+.container .content .content_buttom .compass:hover {
+    box-shadow: 0 8px 20px rgba(13, 103, 25, 0.2);
+    transform: translateY(-3px);
+    background-color: rgba(27, 230, 98, 0.15);
+}
+
+@media (max-width: 900px) {
+    .container .content .content_buttom {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .container .content .content_buttom > div {
+        width: 100%;
+    }
+}
+
+.container .content .content_buttom .Adhkar svg,
+.container .content .content_buttom .prayer_time_tomorow svg,
+.container .content .content_buttom .compass svg{
+    font-size: 2rem;
+}
+
+.container .content .content_buttom .Adhkar:hover,
+.container .content .content_buttom .prayer_time_tomorow:hover,
+.container .content .content_buttom .compass:hover{
+    border-color: #0d6719 ;
+}
+
+.Allert{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid;
+    z-index: 1000;
+}

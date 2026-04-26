@@ -26,7 +26,6 @@ export default function Sebha() {
 
     const changeZikr = () => {
         setAzkarIndex((prev) => (prev + 1) % azkarData.length)
-        setCount(0)
     }
 
     const resetCount = () => {

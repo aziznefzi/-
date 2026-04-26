@@ -17,6 +17,27 @@ import Slide from '@mui/material/Slide';
 export default function Navbar() {
   const theme = useTheme()
   const [showNav, setShowNav] = useState(false)
+
+  const NavMobileData = [
+    {id: 1, icon: <HomeIcon />, to: "/", title: "الرئيسية"},
+    {id: 2, icon: <HistoryIcon />, to: "/sebha", title: "السبحة"},
+    {id: 3, icon: <StickyNote2Icon />, to: "#", title: "الأذكار"},
+    {id: 4, icon: <AutoStoriesIcon />, to: "#", title: "القرآن الكريم"},
+    {id: 5, icon: <AccessTimeIcon />, to: "#", title: "مواقيت الصلاة"},
+    {id: 6, icon: <ExploreIcon />, to: "#", title: "القبلة"},
+    {id: 7, icon: <SettingsIcon />, to: "/settings", title: "الإعدادات"}
+  ]
+
+  const NavMobile = [
+    {id: 1, icon: <HomeIcon />, to: "/", title: "الرئيسية"},
+    {id: 2, icon: <HistoryIcon />, to: "/sebha", title: "السبحة"},
+    {id: 3, icon: <StickyNote2Icon />, to: "#", title: "الأذكار"},
+    {id: 4, icon: <AutoStoriesIcon />, to: "#", title: "القرآن الكريم"},
+    {id: 5, icon: <AccessTimeIcon />, to: "#", title: "مواقيت الصلاة"},
+    {id: 6, icon: <ExploreIcon />, to: "#", title: "القبلة"},
+    {id: 7, icon: <SettingsIcon />, to: "/settings", title: "الإعدادات"}
+  ]
+
   return (
     <div 
     style={{
@@ -29,13 +50,9 @@ export default function Navbar() {
             <img src={logo} alt="logo" />
         </div>
         <ul>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">الرئيسية</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">السبحة</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">الأذكار</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">القرآن الكريم</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">مواقيت الصلاة</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="#">القبلة</Link></li>
-            <li><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to="/settings">الإعدادات</Link></li>
+          {NavMobile.map((item) => (
+              <li key={item.id}><Link style={{color: theme.palette.text.navColor, textDecoration: 'none'}} to={item.to}>{item.title}</Link></li>
+          ))}
         </ul>
         <MenuIcon 
         onClick={() => {setShowNav(!showNav), 
@@ -47,41 +64,13 @@ export default function Navbar() {
     <Slide in={showNav} direction="down">
     <nav className={styles.mobile_nav}>
         <ul>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <HomeIcon /> الرئيسية
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <HistoryIcon /> السبحة
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <StickyNote2Icon /> الأذكار
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <AutoStoriesIcon /> القرآن الكريم
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <AccessTimeIcon /> مواقيت الصلاة
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="#">
-                    <ExploreIcon /> القبلة
-                </Link>
-            </li>
-            <li>
-                <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to="/settings">
-                    <SettingsIcon /> الإعدادات
-                </Link>
-            </li>
+            {NavMobileData.map((item) => (
+                <li onClick={() => setShowNav(false)} key={item.id}>
+                    <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to={item.to}>
+                        {item.icon} {item.title}
+                    </Link>
+                </li>
+            ))}
         </ul>
     </nav>
       </Slide> 

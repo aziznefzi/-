@@ -11,17 +11,17 @@ export default function Sebha() {
     
     const handleSebhaClick = () => {
         setCount(prev => prev + 1)
-        setIsAnimating(true)
+        setAzkarIndex((prev) => (prev + 1) % azkarData.length)
+        
+        setIsAnimating(false)
+        setTimeout(() => {
+            setIsAnimating(true)
+        }, 10)
         
         // Optional vibration for mobile devices
-        if (navigator.vibrate) {
+        if (typeof navigator !== "undefined" && navigator.vibrate) {
             navigator.vibrate(50)
         }
-        
-        // Remove animation class after it finishes
-        setTimeout(() => {
-            setIsAnimating(false)
-        }, 200) 
     }
 
     const changeZikr = () => {
@@ -42,6 +42,7 @@ export default function Sebha() {
             style={{backgroundColor: theme.palette.text.titleColor}}
             className={`${style.SebhaContent} ${isAnimating ? style.shake : ''}`}
             onClick={handleSebhaClick}
+            onAnimationEnd={() => setIsAnimating(false)}
         >
             <p className={style.count}><span className={style.count__num}>{count}</span></p>
         </div>

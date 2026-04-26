@@ -35,6 +35,18 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+@media (max-width: 600px) {
+    .container .SebhaContent{
+        height: 250px;
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .container .SebhaContent .count{
+        font-size: 70px;
+    }
+}
+
 .container .SebhaContent:active {
     transform: scale(0.95);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 5px 15px rgba(0, 0, 0, 0.2);

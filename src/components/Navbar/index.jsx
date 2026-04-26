@@ -55,9 +55,9 @@ export default function Navbar() {
           ))}
         </ul>
         <MenuIcon 
-        onClick={() => {setShowNav(!showNav), 
+        onClick={() => {
           setShowNav(!showNav)
-          showNav === false ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+          document.body.style.overflow = showNav ? "auto" : "hidden"
           }} className={styles.menuIcon}/>
     </nav>
 
@@ -65,8 +65,16 @@ export default function Navbar() {
     <nav className={styles.mobile_nav}>
         <ul>
             {NavMobileData.map((item) => (
-                <li onClick={() => setShowNav(false)} key={item.id}>
-                    <Link className={styles.mobile_link} style={{color: theme.palette.text.navColor}} to={item.to}>
+                <li key={item.id}>
+                    <Link 
+                      className={styles.mobile_link} 
+                      style={{color: theme.palette.text.navColor, display: 'flex', width: '100%'}} 
+                      to={item.to}
+                      onClick={() => {
+                        setShowNav(false)
+                        document.body.style.overflow = "auto"
+                      }}
+                    >
                         {item.icon} {item.title}
                     </Link>
                 </li>

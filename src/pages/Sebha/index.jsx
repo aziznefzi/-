@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import style from "./style.module.css"
-import { useTheme } from '@emotion/react'
+import { useTheme } from '@mui/material/styles'
 import azkarData from "./azkar.json"
 
 export default function Sebha() {

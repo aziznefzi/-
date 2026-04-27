@@ -6,6 +6,7 @@ import Settings from './pages/settings'
 import { Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Sebha from './pages/Sebha'
+import Hadith from './pages/Hadith'
 function App() {
   
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/settings" element={<Settings/>}/>
       <Route path="/adhkar" element={<Adhkar/>}/>
       <Route path="/sebha" element={<Sebha/>}/>
+      <Route path="/hadith" element={<Hadith/>}/>
     </Routes>
     </>
   )

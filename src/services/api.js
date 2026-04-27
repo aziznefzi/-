@@ -47,4 +47,16 @@ export const getHadith = async () => {
     console.log(error);
     return null;
   }
-}
+}
+
+// hadith books
+export const getHadithBooks = async (bookName, page = 1, paginate = 50) => {
+  try {
+    const data = await axios.get(`/api-hadith/hadiths/?apiKey=$2y$10$fhC5WaHPNx6cvwHeaCb2u3J5HaqSLCjHNS766zToJZgiMoAV9gXC&book=${bookName}&paginate=${paginate}&page=${page}`);
+    return data.data;
+  }catch(error){
+    console.log(error);
+    return null;
+  }
+}
+

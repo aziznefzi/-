@@ -22,7 +22,7 @@ export default function Navbar() {
     {id: 1, icon: <HomeIcon />, to: "/", title: "الرئيسية"},
     {id: 2, icon: <HistoryIcon />, to: "/sebha", title: "السبحة"},
     {id: 3, icon: <StickyNote2Icon />, to: "/hadith", title: "الأحاديث"},
-    {id: 4, icon: <AutoStoriesIcon />, to: "#", title: "القرآن الكريم"},
+    {id: 4, icon: <AutoStoriesIcon />, to: "/koraan", title: "القرآن الكريم"},
     {id: 5, icon: <AccessTimeIcon />, to: "#", title: "مواقيت الصلاة"},
     {id: 6, icon: <ExploreIcon />, to: "#", title: "القبلة"},
     {id: 7, icon: <SettingsIcon />, to: "/settings", title: "الإعدادات"}

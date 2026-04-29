@@ -60,3 +60,22 @@ export const getHadithBooks = async (bookName, page = 1, paginate = 50) => {
   }
 }
 
+export const getReciters = async () => {
+  try {
+    const response = await axios.get('https://www.mp3quran.net/api/v3/reciters?language=ar');
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+export const getSurahs = async () => {
+  try {
+    const response = await axios.get('https://api.quran.com/api/v4/chapters?language=ar');
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};

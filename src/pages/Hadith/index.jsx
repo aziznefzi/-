@@ -237,7 +237,7 @@ export default function Hadith() {
                                     onClick={() => handleHadithBooks(currentBookName, selectedBook, totalCount, totalPages)}
                                     disabled={loading}
                                 >
-                                    {totalPages}
+                                    {c}
                                 </button>
                             </>
                         )}

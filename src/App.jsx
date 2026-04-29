@@ -7,6 +7,8 @@ import { Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Sebha from './pages/Sebha'
 import Hadith from './pages/Hadith'
+import Koraan from './pages/Koraan'
+
 function App() {
   
   return (
@@ -18,6 +20,7 @@ function App() {
       <Route path="/adhkar" element={<Adhkar/>}/>
       <Route path="/sebha" element={<Sebha/>}/>
       <Route path="/hadith" element={<Hadith/>}/>
+      <Route path="/koraan" element={<Koraan/>}/>
     </Routes>
     </>
   )

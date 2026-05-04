@@ -4,6 +4,7 @@ import App from './App.jsx'
 import {BrowserRouter} from "react-router-dom"
 import { ThemeProvider } from '@mui/material/styles'
 import {ThemeContextProvider, UseTheme} from "./context/ThemeContext.jsx"
+import { KidsContextProvider } from "./context/KidsContext.jsx"
 import CssBaseline from '@mui/material/CssBaseline'
 
 function Root() {
@@ -21,7 +22,9 @@ function Root() {
 createRoot(document.getElementById('root')).render(
   <>
     <ThemeContextProvider>
-      <Root />
+      <KidsContextProvider>
+        <Root />
+      </KidsContextProvider>
     </ThemeContextProvider>
   </>,
 )

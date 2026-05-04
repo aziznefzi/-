@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Sebha from './pages/Sebha'
 import Hadith from './pages/Hadith'
 import Koraan from './pages/Koraan'
+import Kids from './pages/Kids'
 
 function App() {
   
@@ -21,6 +22,8 @@ function App() {
       <Route path="/sebha" element={<Sebha/>}/>
       <Route path="/hadith" element={<Hadith/>}/>
       <Route path="/koraan" element={<Koraan/>}/>
+      <Route path='/Kids' element={<Kids/>}/>
+      <Route path='/Kids/KidsLevel' element={<Kids/>}/>
     </Routes>
     </>
   )

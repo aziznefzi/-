@@ -1,0 +1,352 @@
+.container{
+    background-image: url(../../image/Kids-img/Kids.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Zain', sans-serif !important;
+}
+
+.container * {
+    font-family: 'Zain', sans-serif !important;
+}
+
+.container nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.container nav .Left_Nav{
+  display: flex;
+  gap: 10px;
+}
+
+.container nav .Left_Nav .LogoutIcon,
+.container nav .Left_Nav .GiftIcon{
+    border-radius: 50%;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    border: solid 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.container nav .Left_Nav .LogoutIcon{
+    background-color: #f1c40f;
+}
+
+.container nav .Left_Nav .GiftIcon{
+    background-color: #8f0ff1;
+}
+
+.container nav .Left_Nav .LogoutIcon:hover,
+.container nav .Left_Nav .GiftIcon:hover{
+    transform: scale(1.2);
+}
+
+
+.container nav .Center_Nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container nav .Center_Nav .title {
+  font-size: 60px;
+  font-weight: 900;
+  -webkit-text-stroke: 2px white;
+}
+
+
+
+.container nav .Center_Nav .title .letterLightBlue { color: #5dade2; }
+.container nav .Center_Nav .title .letterOrange { color: #f39c12; }
+.container nav .Center_Nav .title .letterGreen { color: #2ecc71; }
+.container nav .Center_Nav .title .letterPurple { color: #9b59b6; }
+.container nav .Center_Nav .title .letterYellow { color: #f1c40f; }
+
+.container nav .Center_Nav .subtitle {
+  font-size: 20px;
+  color: #0b3c5d;
+}
+
+.container nav .Right_Nav .Points {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container nav .Right_Nav .Points .ProfileImg{
+    width: 60px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.container nav .Right_Nav .Points .PointsCount {
+    display: flex;
+    align-items: center;
+    background-color: #ffffffa4;
+    color: black;
+    padding: 3px;
+    border-radius: 15px;
+    gap: 2px;
+}
+
+.container nav .Right_Nav .Points .PointsCount svg{
+    color: #f1c40f;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container .content .Top_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.container .content .Top_content .Games_card,
+.container .content .Top_content .Quran_card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    height: 280px;
+    border-radius: 15px;
+    gap: 10px;
+    transition: .3s ease;
+    padding: 20px;
+    border-radius: 30px;
+    border: 4px solid white;
+}
+
+.container .content .Top_content .Games_card{
+    background-image: url(../../image/Kids-img/Games_bg.png);
+    background-size: cover;
+}
+
+.container .content .Top_content .Quran_card{
+    background-image: url(../../image/Kids-img/Book_Bg.png);
+    background-size: cover;
+}
+
+.container .content .Top_content .Games_card:hover,
+.container .content .Top_content .Quran_card:hover{
+    transform: scale(1.04);
+}
+
+.container .content .Top_content .Games_card .content_card,
+.container .content .Top_content .Quran_card .content_card{
+  position: relative;
+  bottom: 37px;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .content .Top_content .Games_card .content_card .icon,
+.container .content .Top_content .Quran_card .content_card .icon{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 35px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+.container .content .Top_content .Games_card .content_card h2,
+.container .content .Top_content .Quran_card .content_card h2{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.container .content .Top_content .Games_card .content_card p,
+.container .content .Top_content .Quran_card .content_card p{
+    text-align: center;
+    font-size: 15px;
+}
+
+.container .content .Top_content .Games_card .content_card button,
+.container .content .Top_content .Quran_card .content_card button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 150px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.container .content .Top_content .Games_card .content_card button{
+    color: #8f0ff1;
+    box-shadow: 0 10px 10px 2px #3a0b5d69;
+}
+
+.container .content .Top_content .Quran_card .content_card button{
+    color: #1270ea;
+    box-shadow: 0 10px 10px 2px #0d2e56a4;
+}
+
+.container .content .bottom_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .content .bottom_content .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
+  gap: 10px;
+  width: 140px;
+  height: 110px;
+  border: 4px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.container .content .bottom_content .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.container .content .bottom_content .rosy{
+    background-image: linear-gradient(to bottom, #fdeaff, #f4c1ff), linear-gradient(to bottom, white, #d000ff);
+}
+
+.container .content .bottom_content .blue{
+    background-image: linear-gradient(to bottom, #e3f0ff, #a7cdff), linear-gradient(to bottom, white, #006eff);
+}
+
+.container .content .bottom_content .green{
+    background-image: linear-gradient(to bottom, #e6ffeb, #b1ffa8), linear-gradient(to bottom, white, #1aff00);
+}
+
+.container .content .bottom_content .gold{
+    background-image: linear-gradient(to bottom, #fff9e3, #ffe991), linear-gradient(to bottom, white, #ffcc00);
+}
+
+.container .content .bottom_content .card img{
+    width: 60px;
+    height: 60px;
+}
+
+.container .content .bottom_content .card p{
+    color: black;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+    .container .content .Top_content .Games_card,
+    .container .content .Top_content .Quran_card {
+        width: 45%;
+        height: 250px;
+    }
+
+    .container nav .Center_Nav .title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+
+    .container nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .container nav .Center_Nav .title {
+        font-size: 45px;
+    }
+
+    .container .content .Top_content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container .content .Top_content .Games_card,
+    .container .content .Top_content .Quran_card {
+        width: 90%;
+        max-width: 400px;
+        height: 280px;
+    }
+
+    .container .content .bottom_content {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .container .content .bottom_content .card {
+        width: 45%;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container nav .Center_Nav .title {
+        font-size: 35px;
+        -webkit-text-stroke: 1px white;
+    }
+
+    .container nav .Center_Nav .subtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .container .content .Top_content .Games_card,
+    .container .content .Top_content .Quran_card {
+        width: 95%;
+        height: 260px;
+    }
+
+    .container .content .bottom_content .card {
+        width: 47%;
+        height: 110px;
+    }
+
+    .container .content .bottom_content .card p {
+        font-size: 16px;
+    }
+
+    .container nav .Right_Nav .Points .ProfileImg {
+        width: 50px;
+    }
+}
